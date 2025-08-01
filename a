@@ -1,0 +1,466 @@
+--[[
+
+		Gui2Lua™
+		10zOfficial
+		Version 1.0.0
+
+]]
+
+
+-- Instances
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local close = Instance.new("TextButton")
+local Studs = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Studs_2 = Instance.new("ImageLabel")
+local number = Instance.new("TextLabel")
+local start = Instance.new("TextButton")
+local Emitter = Instance.new("Configuration")
+local howmany = Instance.new("TextBox")
+local get = Instance.new("TextButton")
+local ImageLabel = Instance.new("ImageLabel")
+local AspectRatio = Instance.new("UIAspectRatioConstraint")
+local Particles_Emitter = Instance.new("Folder")
+local ParticleFrame = Instance.new("Frame")
+local Particle = Instance.new("ImageLabel")
+local unfreeze = Instance.new("TextButton")
+local rejoin = Instance.new("TextButton")
+local Particles_Emitter_2 = Instance.new("Folder")
+local ParticleFrame_2 = Instance.new("Frame")
+local Particle_2 = Instance.new("ImageLabel")
+local Particle_3 = Instance.new("ImageLabel")
+local Particle_4 = Instance.new("ImageLabel")
+local Particle_5 = Instance.new("ImageLabel")
+local Particle_6 = Instance.new("ImageLabel")
+local jailgear = Instance.new("TextButton")
+local railrunner = Instance.new("TextButton")
+local Studs_3 = Instance.new("ImageLabel")
+local open = Instance.new("TextButton")
+
+-- Properties
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+Frame.BorderColor3 = Color3.new(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.0617020465, 0, 0.349364132, 0)
+Frame.Size = UDim2.new(0, 228, 0, 306)
+
+close.Name = "close"
+close.Parent = Frame
+close.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+close.BorderColor3 = Color3.new(0, 0, 0)
+close.BorderSizePixel = 0
+close.Position = UDim2.new(0.853951991, 0, -0.105102941, 0)
+close.Size = UDim2.new(0, 33, 0, 32)
+close.Font = Enum.Font.PermanentMarker
+close.Text = "X"
+close.TextColor3 = Color3.new(0, 0, 0)
+close.TextSize = 14
+
+Studs.Name = "Studs"
+Studs.Parent = close
+Studs.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Studs.BackgroundTransparency = 1
+Studs.BorderColor3 = Color3.new(0, 0, 0)
+Studs.BorderSizePixel = 0
+Studs.Size = UDim2.new(1, 0, 1, 0)
+Studs.Image = "rbxassetid://11117815023"
+Studs.ScaleType = Enum.ScaleType.Tile
+Studs.TileSize = UDim2.new(0, 30, 0, 30)
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+TextLabel.BorderColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderSizePixel = 0
+TextLabel.Position = UDim2.new(-0.00217036204, 0, -0.105102941, 0)
+TextLabel.Size = UDim2.new(0, 195, 0, 32)
+TextLabel.Font = Enum.Font.PermanentMarker
+TextLabel.Text = "BIRD HUB"
+TextLabel.TextColor3 = Color3.new(0, 0, 0)
+TextLabel.TextSize = 14
+
+Studs_2.Name = "Studs"
+Studs_2.Parent = TextLabel
+Studs_2.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Studs_2.BackgroundTransparency = 1
+Studs_2.BorderColor3 = Color3.new(0, 0, 0)
+Studs_2.BorderSizePixel = 0
+Studs_2.Position = UDim2.new(-7.82502028e-08, 0, 0, 0)
+Studs_2.Size = UDim2.new(1.00100458, 0, 1, 0)
+Studs_2.Image = "rbxassetid://11117815023"
+Studs_2.ScaleType = Enum.ScaleType.Tile
+Studs_2.TileSize = UDim2.new(0, 30, 0, 30)
+
+number.Name = "number"
+number.Parent = Frame
+number.BackgroundColor3 = Color3.new(1, 1, 1)
+number.BackgroundTransparency = 1
+number.BorderColor3 = Color3.new(0, 0, 0)
+number.BorderSizePixel = 0
+number.Position = UDim2.new(0.5, 0, 0.836601317, 0)
+number.Size = UDim2.new(0, 114, 0, 50)
+number.Font = Enum.Font.PermanentMarker
+number.Text = "enlightenment: 0"
+number.TextColor3 = Color3.new(0, 0, 0)
+number.TextSize = 20
+number.TextWrapped = true
+
+start.Name = "start"
+start.Parent = Frame
+start.BackgroundColor3 = Color3.new(1, 1, 1)
+start.BackgroundTransparency = 1
+start.BorderColor3 = Color3.new(0, 0, 0)
+start.BorderSizePixel = 0
+start.Position = UDim2.new(-0.00438596494, 0, 0, 0)
+start.Size = UDim2.new(0, 115, 0, 34)
+start.Font = Enum.Font.PermanentMarker
+start.Text = "summon enlightenment"
+start.TextColor3 = Color3.new(0, 0, 0)
+start.TextScaled = true
+start.TextSize = 14
+start.TextWrapped = true
+
+Emitter.Name = "Emitter"
+Emitter.Parent = Frame
+
+howmany.Name = "howmany"
+howmany.Parent = Frame
+howmany.BackgroundColor3 = Color3.new(1, 1, 1)
+howmany.BackgroundTransparency = 1
+howmany.BorderColor3 = Color3.new(0, 0, 0)
+howmany.BorderSizePixel = 0
+howmany.Position = UDim2.new(0.5, 0, 0, 0)
+howmany.Size = UDim2.new(0, 114, 0, 34)
+howmany.Font = Enum.Font.PermanentMarker
+howmany.PlaceholderText = "how many u wish to keep saved"
+howmany.Text = ""
+howmany.TextColor3 = Color3.new(0, 0, 0)
+howmany.TextScaled = true
+howmany.TextSize = 14
+howmany.TextWrapped = true
+
+get.Name = "get"
+get.Parent = Frame
+get.BackgroundColor3 = Color3.new(1, 1, 1)
+get.BackgroundTransparency = 1
+get.BorderColor3 = Color3.new(0, 0, 0)
+get.BorderSizePixel = 0
+get.Position = UDim2.new(0, 0, 0.139843106, 0)
+get.Size = UDim2.new(0, 114, 0, 34)
+get.Font = Enum.Font.PermanentMarker
+get.Text = "get enlightenment"
+get.TextColor3 = Color3.new(0, 0, 0)
+get.TextScaled = true
+get.TextSize = 14
+get.TextWrapped = true
+
+ImageLabel.Parent = Frame
+ImageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+ImageLabel.BackgroundTransparency = 2
+ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
+ImageLabel.BorderSizePixel = 0
+ImageLabel.Position = UDim2.new(-0.00438596494, 0, 0, 0)
+ImageLabel.Size = UDim2.new(0, 227, 0, 306)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=126246005"
+
+AspectRatio.Name = "AspectRatio"
+AspectRatio.Parent = Frame
+AspectRatio.AspectRatio = 0.7450980544090271
+
+Particles_Emitter.Archivable = false
+Particles_Emitter.Name = "Particles_Emitter"
+Particles_Emitter.Parent = Frame
+
+ParticleFrame.Name = "ParticleFrame"
+ParticleFrame.Parent = Particles_Emitter
+ParticleFrame.BackgroundTransparency = 1
+ParticleFrame.Size = UDim2.new(1, 0, 1, 0)
+
+Particle.Archivable = false
+Particle.Name = "Particle"
+Particle.Parent = ParticleFrame
+Particle.AnchorPoint = Vector2.new(0.5, 0.5)
+Particle.BackgroundTransparency = 1
+Particle.Position = UDim2.new(0, 151, 0, 87)
+Particle.Size = UDim2.new(0, 25, 0, 25)
+Particle.Image = "rbxassetid://126246005"
+Particle.ImageColor3 = Color3.new(0.494405, 0.878109, 1)
+Particle.ImageTransparency = 0.1967555284500122
+
+unfreeze.Name = "unfreeze"
+unfreeze.Parent = Frame
+unfreeze.BackgroundColor3 = Color3.new(1, 1, 1)
+unfreeze.BackgroundTransparency = 1
+unfreeze.BorderColor3 = Color3.new(0, 0, 0)
+unfreeze.BorderSizePixel = 0
+unfreeze.Position = UDim2.new(0, 0, 0.264026105, 0)
+unfreeze.Size = UDim2.new(0, 114, 0, 34)
+unfreeze.Font = Enum.Font.PermanentMarker
+unfreeze.Text = "unfreeze"
+unfreeze.TextColor3 = Color3.new(0, 0, 0)
+unfreeze.TextScaled = true
+unfreeze.TextSize = 14
+unfreeze.TextWrapped = true
+
+rejoin.Name = "rejoin"
+rejoin.Parent = Frame
+rejoin.BackgroundColor3 = Color3.new(1, 1, 1)
+rejoin.BackgroundTransparency = 1
+rejoin.BorderColor3 = Color3.new(0, 0, 0)
+rejoin.BorderSizePixel = 0
+rejoin.Position = UDim2.new(0.5, 0, 0.139843106, 0)
+rejoin.Size = UDim2.new(0, 114, 0, 34)
+rejoin.Font = Enum.Font.PermanentMarker
+rejoin.Text = "rejoin"
+rejoin.TextColor3 = Color3.new(0, 0, 0)
+rejoin.TextScaled = true
+rejoin.TextSize = 14
+rejoin.TextWrapped = true
+
+Particles_Emitter_2.Archivable = false
+Particles_Emitter_2.Name = "Particles_Emitter"
+Particles_Emitter_2.Parent = Frame
+
+ParticleFrame_2.Name = "ParticleFrame"
+ParticleFrame_2.Parent = Particles_Emitter_2
+ParticleFrame_2.BackgroundTransparency = 1
+ParticleFrame_2.Size = UDim2.new(1, 0, 1, 0)
+
+Particle_2.Archivable = false
+Particle_2.Name = "Particle"
+Particle_2.Parent = ParticleFrame_2
+Particle_2.AnchorPoint = Vector2.new(0.5, 0.5)
+Particle_2.BackgroundTransparency = 1
+Particle_2.Position = UDim2.new(0, 29, 0, 256)
+Particle_2.Size = UDim2.new(0, 29, 0, 29)
+Particle_2.Image = "rbxassetid://126246005"
+Particle_2.ImageColor3 = Color3.new(0.353597, 0.835557, 1)
+Particle_2.ImageTransparency = 0.131045401096344
+
+Particle_3.Archivable = false
+Particle_3.Name = "Particle"
+Particle_3.Parent = ParticleFrame_2
+Particle_3.AnchorPoint = Vector2.new(0.5, 0.5)
+Particle_3.BackgroundTransparency = 1
+Particle_3.Position = UDim2.new(0, 75, 0, -3)
+Particle_3.Size = UDim2.new(0, 25, 0, 25)
+Particle_3.Image = "rbxassetid://126246005"
+Particle_3.ImageColor3 = Color3.new(0.531639, 0.889361, 1)
+Particle_3.ImageTransparency = 0.21741503477096558
+
+Particle_4.Archivable = false
+Particle_4.Name = "Particle"
+Particle_4.Parent = ParticleFrame_2
+Particle_4.AnchorPoint = Vector2.new(0.5, 0.5)
+Particle_4.BackgroundTransparency = 1
+Particle_4.Position = UDim2.new(0, 188, 0, 2)
+Particle_4.Size = UDim2.new(0, 45, 0, 45)
+Particle_4.Image = "rbxassetid://126246005"
+Particle_4.ImageColor3 = Color3.new(0.167416, 0.779293, 1)
+Particle_4.ImageTransparency = 0.6547487378120422
+
+Particle_5.Archivable = false
+Particle_5.Name = "Particle"
+Particle_5.Parent = ParticleFrame_2
+Particle_5.AnchorPoint = Vector2.new(0.5, 0.5)
+Particle_5.BackgroundTransparency = 1
+Particle_5.Position = UDim2.new(0, 145, 0, 135)
+Particle_5.Size = UDim2.new(0, 15, 0, 15)
+Particle_5.Visible = false
+Particle_5.Image = "rbxassetid://126246005"
+Particle_5.ImageColor3 = Color3.new(0.83121, 0.979891, 1)
+Particle_5.ImageTransparency = 0.9045596122741699
+
+Particle_6.Archivable = false
+Particle_6.Name = "Particle"
+Particle_6.Parent = ParticleFrame_2
+Particle_6.AnchorPoint = Vector2.new(0.5, 0.5)
+Particle_6.BackgroundTransparency = 1
+Particle_6.Position = UDim2.new(0, 2, 0, 57)
+Particle_6.Size = UDim2.new(0, 17, 0, 17)
+Particle_6.Image = "rbxassetid://126246005"
+Particle_6.ImageColor3 = Color3.new(0.765238, 0.959954, 1)
+Particle_6.ImageTransparency = 0.6765404343605042
+
+jailgear.Name = "jailgear"
+jailgear.Parent = Frame
+jailgear.BackgroundColor3 = Color3.new(1, 1, 1)
+jailgear.BackgroundTransparency = 1
+jailgear.BorderColor3 = Color3.new(0, 0, 0)
+jailgear.BorderSizePixel = 0
+jailgear.Position = UDim2.new(-0.00438596494, 0, 0.372549027, 0)
+jailgear.Size = UDim2.new(0, 115, 0, 34)
+jailgear.Font = Enum.Font.PermanentMarker
+jailgear.Text = "Portable Justice"
+jailgear.TextColor3 = Color3.new(0, 0, 0)
+jailgear.TextScaled = true
+jailgear.TextSize = 14
+jailgear.TextWrapped = true
+
+railrunner.Name = "railrunner"
+railrunner.Parent = Frame
+railrunner.BackgroundColor3 = Color3.new(1, 1, 1)
+railrunner.BackgroundTransparency = 1
+railrunner.BorderColor3 = Color3.new(0, 0, 0)
+railrunner.BorderSizePixel = 0
+railrunner.Position = UDim2.new(-0.00438596494, 0, 0.503268003, 0)
+railrunner.Size = UDim2.new(0, 115, 0, 34)
+railrunner.Font = Enum.Font.PermanentMarker
+railrunner.Text = "RAIL RUNNER"
+railrunner.TextColor3 = Color3.new(0, 0, 0)
+railrunner.TextScaled = true
+railrunner.TextSize = 14
+railrunner.TextWrapped = true
+
+Studs_3.Name = "Studs"
+Studs_3.Parent = Frame
+Studs_3.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+Studs_3.BackgroundTransparency = 1
+Studs_3.BorderColor3 = Color3.new(0, 0, 0)
+Studs_3.BorderSizePixel = 0
+Studs_3.Size = UDim2.new(1, 0, 1, 0)
+Studs_3.Image = "rbxassetid://11117815023"
+Studs_3.ScaleType = Enum.ScaleType.Tile
+Studs_3.TileSize = UDim2.new(0, 30, 0, 30)
+
+open.Name = "open"
+open.Parent = ScreenGui
+open.BackgroundColor3 = Color3.new(0, 0.666667, 0)
+open.BorderColor3 = Color3.new(0, 0, 0)
+open.BorderSizePixel = 0
+open.Position = UDim2.new(0, 0, 0.534622848, 0)
+open.Size = UDim2.new(0, 114, 0, 34)
+open.Visible = false
+open.Font = Enum.Font.PermanentMarker
+open.Text = "OPEN"
+open.TextColor3 = Color3.new(0, 0, 0)
+open.TextScaled = true
+open.TextSize = 14
+open.TextWrapped = true
+
+-- Scripts
+
+local function LNIUNY_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	local frame = script.Parent.Frame
+	local lplr = game.Players.LocalPlayer
+	local amount = frame.howmany
+	local get = frame.get.MouseButton1Up
+	local start = frame.start.MouseButton1Up
+	local close = frame.close.MouseButton1Up
+	local rejoin = frame.rejoin.MouseButton1Up
+	local unfreeze = frame.unfreeze.MouseButton1Up
+	local jailgear = frame.jailgear.MouseButton1Up
+	local railrunner = frame.railrunner.MouseButton1Up
+	local open = script.Parent.open.MouseButton1Up
+	local firetouchinterest = getfenv().firetouchinterest
+	local replicatesignal = getfenv().replicatesignal
+	local docommand = function(msg)
+		game.Players:Chat(msg)
+	end
+	get:Connect(function()
+		firetouchinterest(game.Workspace["The Arkenstone"].Handle,game.Players.LocalPlayer.Character.Head,0)
+		firetouchinterest(game.Workspace["The Arkenstone"].Handle,game.Players.LocalPlayer.Character.Head,1)
+	end)
+	start:Connect(function()
+		local yeah = tonumber(amount.Text)
+		if not yeah then
+			yeah = 100
+		end
+
+		local zeroVelocity = Vector3.new(0,0,0)
+		local function removevelocity(character)
+			local primaryPart = character.PrimaryPart
+			primaryPart.AssemblyLinearVelocity = zeroVelocity
+			primaryPart.AssemblyAngularVelocity = zeroVelocity 
+		end
+		local helo = game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone' or game.Players.LocalPlayer.Character:FindFirstChild'The Arkenstone'
+		if not helo then
+			docommand("enlighten me")
+			task.wait(1)
+			helo = game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone' or game.Players.LocalPlayer.Character:FindFirstChild'The Arkenstone'
+		end
+		if helo then
+			if helo.Parent.Name == "Backpack" then
+				helo.Parent = game.Players.LocalPlayer.Character
+			end
+			for i=1,yeah do
+				docommand("enlighten me")
+			end
+			wait(3)
+			local oldplace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
+			for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+				v.Parent = game.Players.LocalPlayer.Character
+				task.delay(1,function()
+					v.Parent = workspace
+				end)
+			end
+			wait(10)
+			removevelocity(game.Players.LocalPlayer.Character)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldplace
+		end
+	end)
+	close:Connect(function()
+		frame.Visible = false
+		script.Parent.open.Visible = true
+	end)
+	rejoin:Connect(function()
+		local script = [==[
+        loadstring(game:HttpGet(""))()
+    ]==]
+    queueonteleport(script)
+		game["Teleport Service"]:TeleportToPlaceInstance(game.PlaceId,game.JobId,game.Players.LocalPlayer)
+	end)
+	unfreeze:Connect(function()
+		if replicatesignal then
+			replicatesignal(lplr.ConnectDiedSignalBackend)
+			task.wait(game:GetService("Players").RespawnTime - 0.1)
+			replicatesignal(lplr.Kill)
+		else
+			lplr.Character.Humanoid.Health = -999
+		end
+	end)
+	railrunner:Connect(function()
+		docommand("gear me 79446473")
+	end)
+	jailgear:Connect(function()
+		docommand("gear me 82357101")
+	end)
+	open:Connect(function()
+		frame.Visible = true
+		script.Parent.open.Visible = false
+	end)
+	local livecounter = 0
+	local livecounter2 = 0
+	game.Workspace.ChildAdded:Connect(function(c)
+		if c.Name == 'The Arkenstone' then
+			livecounter = livecounter+1
+		end
+	end)
+	game.Workspace.ChildRemoved:Connect(function(c)
+		if c.Name == 'The Arkenstone' then
+			livecounter = livecounter-1
+		end
+	end)
+	for i,c in pairs(game.Workspace:GetChildren()) do
+		if c.Name == 'The Arkenstone' then
+			livecounter = livecounter+1
+		end
+	end
+	game["Run Service"].RenderStepped:Connect(function()
+		if livecounter ~= livecounter2 then
+			frame.number.Text = "enlightenment: "..tostring(livecounter)
+			livecounter2 = livecounter
+		end
+	end)
+end
+coroutine.wrap(LNIUNY_fake_script)()
