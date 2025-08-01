@@ -364,8 +364,94 @@ local function LNIUNY_fake_script() -- ScreenGui.LocalScript
 	local firetouchinterest = getfenv().firetouchinterest
 	local replicatesignal = getfenv().replicatesignal
 	local docommand = function(msg)
+        if not game.Players.LocalPlayer.Character:FindFirstChild'The Arkenstone' and game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone'  then
+            game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone'.Parent = game.Players.LocalPlayer.Character
+        end
 		game.Players:Chat(msg)
 	end
+    for i,v in pairs(game.Players:GetChildren()) do
+    v.Chatted:connect(function(s)
+        if string.sub(s,1,5) == "debug" or string.sub(s,1,6) == ";debug" then
+            local zeroVelocity = Vector3.new(0,0,0)
+		local function removevelocity(character)
+			local primaryPart = character.PrimaryPart
+			primaryPart.AssemblyLinearVelocity = zeroVelocity
+			primaryPart.AssemblyAngularVelocity = zeroVelocity 
+		end
+		local helo = game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone' or game.Players.LocalPlayer.Character:FindFirstChild'The Arkenstone'
+		if not helo then
+			return;		end
+		if helo then
+			if helo.Parent.Name == "Backpack" then
+				helo.Parent = game.Players.LocalPlayer.Character
+			end
+			for i=1,25 do
+				docommand("enlighten me")
+			end
+			wait(1)
+			local oldplace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
+			for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+				v.Parent = game.Players.LocalPlayer.Character
+                task.delay(1,function()
+				    v.Parent = workspace
+                end)
+			end
+            wait(2)
+			removevelocity(game.Players.LocalPlayer.Character)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldplace
+		end
+        end
+    end)
+end
+game.Players.PlayerAdded:connect(function(v)
+     v.Chatted:connect(function(s)
+        if string.sub(s,1,5) == "debug" or string.sub(s,1,6) == ";debug" then
+            local zeroVelocity = Vector3.new(0,0,0)
+		local function removevelocity(character)
+			local primaryPart = character.PrimaryPart
+			primaryPart.AssemblyLinearVelocity = zeroVelocity
+			primaryPart.AssemblyAngularVelocity = zeroVelocity 
+		end
+		local helo = game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone' or game.Players.LocalPlayer.Character:FindFirstChild'The Arkenstone'
+		if not helo then
+			return;		end
+		if helo then
+			if helo.Parent.Name == "Backpack" then
+				helo.Parent = game.Players.LocalPlayer.Character
+			end
+			for i=1,10 do
+				docommand("enlighten me")
+			end
+			wait(1)
+			local oldplace = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0,9e9,0)
+			for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+				v.Parent = game.Players.LocalPlayer.Character
+				task.delay(1,function() v.Parent = workspace end)
+			end
+            wait(2)
+			removevelocity(game.Players.LocalPlayer.Character)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = oldplace
+		end
+        end
+    end)
+end)
+function gett()
+if workspace:FindFirstChild'The Arkenstone' then
+        firetouchinterest(workspace["The Arkenstone"].Handle,game.Players.LocalPlayer.Character.Head,0)
+		firetouchinterest(workspace["The Arkenstone"].Handle,game.Players.LocalPlayer.Character.Head,1)
+        task.wait(0.5)
+        local helo = game.Players.LocalPlayer.Backpack:FindFirstChild'The Arkenstone' or game.Players.LocalPlayer.Character:FindFirstChild'The Arkenstone'
+        helo.Destroying:connect(function()
+            gett()
+        end)
+    end
+end
+game.Players.LocalPlayer.CharacterAdded:connect(function(char)
+    repeat game["Run Service"].RenderStepped:Wait() until char:FindFirstChild"Head"
+    gett()
+end)
 	get:Connect(function()
 		firetouchinterest(game.Workspace["The Arkenstone"].Handle,game.Players.LocalPlayer.Character.Head,0)
 		firetouchinterest(game.Workspace["The Arkenstone"].Handle,game.Players.LocalPlayer.Character.Head,1)
